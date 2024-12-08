@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Search Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+            flex-direction: column;
+        }
+
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 5px 20px;
+            width: 500px;
+            max-width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .search-container.dark-mode {
+            background-color: #333;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s;
+        }
+
+        .search-bar:focus {
+            background-color: #e0e0e0;
+        }
+
+        .search-bar.dark-mode {
+            background-color: #444;
+            color: white;
+        }
+
+        .search-button {
+            background-color: #4CAF50;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            color: white;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-button:hover {
+            background-color: #45a049;
+        }
+
+        .dark-mode-button, .incognito-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .dark-mode-button:hover, .incognito-button:hover {
+            background-color: #444;
+        }
+
+        .incognito-message {
+            margin-top: 20px;
+            color: red;
+            font-size: 16px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .incognito-mode .incognito-message {
+            display: block;
+        }
+
+        .eye-icon {
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .eye-icon.open {
+            transform: rotate(0deg);
+        }
+
+        .eye-icon.closed {
+            transform: rotate(180deg);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .search-container {
+                width: 90%;
+            }
+
+            .search-button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            .dark-mode-button, .incognito-button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            .eye-icon {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .search-container {
+                width: 100%;
+                padding: 5px 10px;
+            }
+
+            .search-bar {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            .search-button {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            .dark-mode-button, .incognito-button {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+          small{ 
+            color:skyblue; 
+            
+            .eye-icon {
+                font-size: 18px;
+            }
+        }
+      </style>
+</head>
+<body>
+  <h3>codewithsyam01| Search Bar </h3>
+    <div class="search-container">
+        <input type="text" class="search-bar" id="searchInput" placeholder="Search or type URL">
+        <button class="search-button" onclick="performSearch()">Search</button>
+    </div>
+    <button class="dark-mode-button" onclick="toggleDarkMode()">Dark Mode</button>
+    <div class="incognito-message">You are in Incognito Mode. Please open this page in Incognito.</div>
+    <i id="eyeIcon" class="fas fa-eye eye-icon open" onclick="toggleEyeIcon()"></i>
+
+    <script>
+        function performSearch() {
+            var query = document.getElementById('searchInput').value;
+            if (query) {
+                if (query.includes('http://') || query.includes('https://')) {
+                    window.open(query, '_blank');
+                } else {
+                    var searchURL = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+                    window.open(searchURL, '_blank');
+                }
+            } else {
+                alert('Please enter something to search.');
+            }
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('.search-container').classList.toggle('dark-mode');
+            document.querySelector('.search-bar').classList.toggle('dark-mode');
+            document.getElementById('eyeIcon').classList.toggle('open');
+            document.getElementById('eyeIcon').classList.toggle('closed');
+        }
+
+        function toggleIncognitoMode() {
+            document.body.classList.toggle('incognito-mode');
+        }
+
+        function toggleEyeIcon() {
+            document.getElementById('eyeIcon').classList.toggle('open');
+            document.getElementById('eyeIcon').classList.toggle('closed');
+        }
+    </script>
+  <br>
+  <small>Coding and Designed : CodeWithShyam</small>
+</body>
+</html>
