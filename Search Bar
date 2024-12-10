@@ -5,7 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Search Bar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
+    <h3>My Personal Search Bar </h3>
+     <style>
+        h3{
+        background-color:yellow; 
+            color:red;
+        }
+        em{
+        background-color:skyblue;
+            color:red;
+        }
+        small{
+            background-color:green;
+            color:yellow;
+        }
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -153,29 +166,23 @@
                 font-size: 14px;
             }
 
-            .dark-mode-button, .incognito-button {
-                padding: 8px 12px;
-                font-size: 12px;
-            }
-          small{ 
-            color:skyblue; 
-            
-            .eye-icon {
+                      .eye-icon {
                 font-size: 18px;
             }
         }
-      </style>
+    </style>
 </head>
 <body>
-  <h3>codewithsyam01| Search Bar </h3>
     <div class="search-container">
-        <input type="text" class="search-bar" id="searchInput" placeholder="Search or type URL">
-        <button class="search-button" onclick="performSearch()">Search</button>
+        <input type="text" class="search-bar" id="searchInput" placeholder="Search wor type URL 🕺👀">
+        <button class="search-button" onclick="performSearch()">Boom</button>
     </div>
     <button class="dark-mode-button" onclick="toggleDarkMode()">Dark Mode</button>
-    <div class="incognito-message">You are in Incognito Mode. Please open this page in Incognito.</div>
     <i id="eyeIcon" class="fas fa-eye eye-icon open" onclick="toggleEyeIcon()"></i>
-
+    <br>
+    <small>Designed and coding by |codewithshyam01</small>
+    <br>
+    <em>©2005-2024 | All Rights Reserved</em>
     <script>
         function performSearch() {
             var query = document.getElementById('searchInput').value;
@@ -187,7 +194,7 @@
                     window.open(searchURL, '_blank');
                 }
             } else {
-                alert('Please enter something to search.');
+                alert('Are you kidding with me huh🙄?.');
             }
         }
 
@@ -199,16 +206,10 @@
             document.getElementById('eyeIcon').classList.toggle('closed');
         }
 
-        function toggleIncognitoMode() {
-            document.body.classList.toggle('incognito-mode');
-        }
-
-        function toggleEyeIcon() {
+      function toggleEyeIcon() {
             document.getElementById('eyeIcon').classList.toggle('open');
             document.getElementById('eyeIcon').classList.toggle('closed');
         }
     </script>
-  <br>
-  <small>Coding and Designed : CodeWithShyam</small>
 </body>
 </html>
