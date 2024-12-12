@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codewithshyam~protfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* CSS Variables for Theme */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-light: #f4f6f7;
+            --text-color: #333;
+            --white: #ffffff;
+            --hover-color: #2980b9;
+            --card-bg: #fff;
+            --nav-hover-color: #2980b9;
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-light);
+            color: var(--text-color);
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 20px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            background-color: var(--nav-hover-color);
+            color: var(--white);
+        }
+
+        /* Breaking News Ticker */
+        .breaking-news {
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .breaking-news-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker 15s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Main Content Layout */
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 20px;
+        }
+
+        /* Featured News Styles */
+        .featured-news {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        .main-story {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-story img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .story-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+        }
+
+        .main-story:hover .story-overlay {
+            height: 100%;
+        }
+
+        .story-text {
+            color: white;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+        }
+
+        /* Blog Post Hover Effect */
+        .blog-post {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-post h2 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .blog-post p {
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+
+        /* Section Styling */
+        section {
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-news {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-menu {
+                display: none; /* Placeholder for mobile menu */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">codewithshyam</div>
+        <ul class="nav-menu">
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('world')">World</a></li>
+            <li><a href="#" onclick="showSection('technology')">Technology</a></li>
+            <li><a href="#" onclick="showSection('sports')">Sports</a></li>
+            <li><a href="#" onclick="showSection('entertainment')">Entertainment</a></li>
+            <li><a href="#" onclick="showSection('literature')">Literature</a></li>
+            <li><a href="#" onclick="showSection('blog')">Blog</a></li>
+        </ul>
+    </header>
+
+    <!-- Breaking News Ticker -->
+    <div class="breaking-news">
+        <div class="breaking-news-content">
+            Your advertisment runs here|Contact us :
+            Email:byteshyam7@gmail.com| Or just messaged on our social media handle
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Home Section -->
+        <section id="home" class="active">
+            <h1>Welcome to codewithshyam</h1>
+            <strong> Your trusted website for the latest news</strong>
+        </section>
+
+        <!-- World Section -->
+        <section id="world">
+            <h1>World News</h1>
+            <p>Breaking News: Donald Trump win the election</p>
+        </section>
+
+        <!-- Technology Section -->
+        <section id="technology">
+            <h1>Technology News</h1>
+            <p>In Iphone 16 we can see only now one camera</p>
+        </section>
+
+        <!-- Sports Section -->
+        <section id="sports">
+            <h1>Sports News</h1>
+            <p>Janakpur Bolts win to the kathmandu gurkhas</p>
+        </section>
+
+        <!-- Entertainment Section -->
+        <section id="entertainment">
+            <h1>Entertainment News</h1>
+            <p>Nichay Mallhan Aka trigeered insan get engagged</p>
+        </section>
+
+        <!-- Literature Section -->
+        <section id="literature">
+            <h1>Literature</h1>
+            <img src="poem.jpg" alt="poem">
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog">
+            <h1>Our Blog</h1>
+            <div class="blog-post">
+                <h2>Post 1</h2>
+                <p>My Name is Ghanashyam Budhathoki aka codewithshyam and i am a coding ethusaist</p>
+            </div>
+            <div class="blog-post">
+                <h2>Post 2</h2>
+                <ul>
+                    <li>
+                        Calm Poet
+                        <li>Carveen Thapa</li>
+                        <li>codewithshyam</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            © 2024 codewithshyam|| All Rights Reserved.
+        </div>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100089349907982&mibextid=ZbWKwL
+
+            "><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/Ghanashyam072?t=c9ERg2IMpYk_SzbnK2rPIA&s=09
+            "><i class="fab fa-twitter"></i></a>
+
+            <a href="https://www.linkedin.com/in/ghanashyam-budhathoki-03290731b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+            "><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach((section) => {
+                section.classList.remove('active');
+            });
+
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
