@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1e3a5f;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #162a40;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #4CAF50;
+        }
+        .menu {
+            display: flex;
+        }
+        .menu a {
+            text-decoration: none;
+            color: #ffffff;
+            margin: 0 15px;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        .menu a:hover {
+            color: #4CAF50;
+        }
+        .section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+        #home { background-color: #1e3a5f; }
+        #service { background-color: #233954; }
+        #blog { background-color: #2a4a67; }
+        #contact { background-color: #2e5874; }
+        .main-section h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .contact-btn {
+            margin-top: 20px;
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .contact-btn:hover {
+            background-color: #45a049;
+            transform: translateY(-3px);
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: white;
+            font-size: 2rem;
+            margin: 0 15px;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #4CAF50;
+        }
+        footer {
+            background-color: #162a40;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            color: #ffffff;
+            font-size: 0.9rem;
+        }
+        footer a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">DEVRAJ SHRESTHA</div>
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#service">Service</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <div id="home" class="section">
+        <h1>Welcome to My Portfolio</h1>
+        <a href="#contact" class="contact-btn">Contact Me</a>
+    </div>
+
+    <!-- Services Section -->
+    <div id="service" class="section">
+        <h1>My Services</h1>
+        <p>I offer web development, UI/UX design, and more!</p>
+    </div>
+
+    <!-- Blog Section -->
+    <div id="blog" class="section">
+        <h1>Blog</h1>
+        <p>Read my latest articles and insights.</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section">
+        <h1>Contact Me</h1>
+        <p>Feel free to reach out for collaborations or projects.</p>
+        <div class="social-icons">
+            <a href="https://facebook.com/yourhandle" target="_blank" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/yourhandle" target="_blank" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourhandle" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://instagram.com/yourhandle" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Devraj Shrestha. All rights reserved. | <a href="#">Privacy Policy</a>
+    </footer>
+</body>
+</html>

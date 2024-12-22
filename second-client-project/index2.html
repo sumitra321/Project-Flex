@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: #1b1b1b;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #00ff88;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu a {
+            color: #ffffff;
+            font-size: 1rem;
+            padding: 5px 10px;
+        }
+
+        .menu a:hover {
+            color: #00ff88;
+            border-bottom: 2px solid #00ff88;
+        }
+
+        /* Hero Section */
+        #home {
+            background: linear-gradient(135deg, #1f2833, #0b0c10);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        #home h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #dddddd;
+        }
+
+        .hero-btn {
+            background-color: #00ff88;
+            color: #121212;
+            padding: 15px 30px;
+            font-size: 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            background-color: #00cc6a;
+        }
+
+        /* Section Layout */
+        .section {
+            padding: 100px 50px;
+            text-align: center;
+        }
+
+        .section h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1rem;
+            color: #bbbbbb;
+            margin-bottom: 40px;
+        }
+
+        /* Services Section */
+        #service {
+            background-color: #1f2833;
+        }
+
+        .service-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #121212;
+            border-radius: 15px;
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #00ff88;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #0b0c10;
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .contact-icons a {
+            color: #ffffff;
+            font-size: 2rem;
+            padding: 15px;
+            border-radius: 50%;
+            background-color: #121212;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-icons a:hover {
+            background-color: #00ff88;
+            color: #121212;
+            transform: scale(1.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1b1b1b;
+            text-align: center;
+            padding: 20px;
+            color: #bbbbbb;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #00ff88;
+        }
+
+        /* Responsive Design */
+        /* Mobile - Small Screens */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .menu a {
+                font-size: 1.2rem;
+                padding: 10px 0;
+            }
+
+            #home h1 {
+                font-size: 2.5rem;
+            }
+
+            #home p {
+                font-size: 1rem;
+            }
+
+            .hero-btn {
+                font-size: 1.2rem;
+                padding: 12px 25px;
+            }
+
+            .section h1 {
+                font-size: 2.2rem;
+            }
+
+            .service-cards {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .card {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .contact-icons a {
+                font-size: 1.8rem;
+                padding: 12px;
+            }
+        }
+
+        /* Tablet Screens */
+        @media (max-width: 1024px) {
+            .navbar {
+                padding: 20px 30px;
+            }
+
+            .logo {
+                font-size: 1.6rem;
+            }
+
+            .menu a {
+                font-size: 1.1rem;
+            }
+
+            #home h1 {
+                font-size: 3rem;
+            }
+
+            .hero-btn {
+                padding: 12px 25px;
+            }
+
+            .service-cards {
+                gap: 20px;
+            }
+
+            .card {
+                width: 45%;
+                padding: 25px;
+            }
+
+            .contact-icons a {
+                font-size: 2rem;
+                padding: 15px;
+            }
+        }
+
+        /* Desktop Screens */
+        @media (min-width: 1025px) {
+            .navbar {
+                padding: 20px 50px;
+            }
+
+            .menu a {
+                font-size: 1rem;
+            }
+
+            #home h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero-btn {
+                padding: 15px 30px;
+            }
+
+            .service-cards {
+                gap: 30px;
+            }
+
+            .card {
+                width: 300px;
+                padding: 30px;
+            }
+
+            .contact-icons a {
+                font-size: 2rem;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">DEVRAJ SHRESTHA</div>
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#service">Service</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I am a passionate web developer crafting beautiful and functional experiences.</p>
+        <a href="#contact" class="hero-btn">Get in Touch</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="service">
+        <h1>My Services</h1>
+        <p>Explore the range of services I offer to bring your ideas to life.</p>
+        <div class="service-cards">
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>Building responsive, scalable websites tailored to your needs.</p>
+            </div>
+            <div class="card">
+                <h3>UI/UX Design</h3>
+                <p>Creating visually appealing and user-friendly interfaces.</p>
+            </div>
+            <div class="card">
+                <h3>SEO Optimization</h3>
+                <p>Improving your website's ranking to reach a wider audience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <p>Feel free to reach out for collaborations or projects.</p>
+        <div class="contact-icons">
+            <a href="https://facebook.com/yourhandle" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/yourhandle" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/in/yourhandle" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 DevRaj Shrestha | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
