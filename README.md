@@ -1,4 +1,4 @@
-#Project-Flex
+Project-Flex
 
 Welcome to Project-Flex! This repository is a collection of various projects I've developed for fun and learning. Feel free to explore and use them as a reference or starting point for your own projects.
 
