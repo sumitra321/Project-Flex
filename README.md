@@ -8,7 +8,7 @@ Projects
 
 Here are some of the projects included in this repository:
 
-AI Project: An exploration into artificial intelligence applications.
+AI Project: An exploration into artificial intelligence.
 
 Project For Dev.Np: A project developed for the Dev.Np community.
 
