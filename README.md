@@ -13,12 +13,11 @@ Usage
 Contributing
 
 License
-
-
+<hr>
 About
 
 Project-Flex is a compilation of random cool projects that showcase different aspects of web development and programming. Each project is self-contained and demonstrates unique features or concepts.
-
+<hr>
 Projects
 
 Here are some of the projects included in this repository:
@@ -41,7 +40,7 @@ Search Bar: An implementation of a search bar feature.
 
 
 Each project is located in its respective directory within the repository. You can navigate to these directories to find the source code and related assets.
-
+<hr>
 Usage
 
 Feel free to explore and use these projects for your personal learning and development. If you decide to use or modify any part of these projects, please adhere to the following guidelines:
@@ -56,11 +55,11 @@ DO NOT try to profit from free content: These projects are shared freely for edu
 
 
 If any unauthorized use is discovered, appropriate action will be taken to prevent it.
-
+<hr>
 Contributing
 
 While this repository is primarily a personal collection, contributions are welcome. If you have suggestions, improvements, or new projects that align with the spirit of this collection, feel free to open an issue or submit a pull request.
-
+<hr>
 License
 
 This repository is licensed under the CC0-1.0 License. For more details, please refer to the LICENSE file.
