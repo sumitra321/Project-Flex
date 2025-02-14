@@ -2,21 +2,6 @@ Project-Flex
 
 Welcome to Project-Flex! This repository is a collection of various projects I've developed for fun and learning. Feel free to explore and use them as a reference or starting point for your own projects.
 
-Table of Contents
-
-About
-
-Projects
-
-Usage
-
-Contributing
-
-License
-
-
-About
-
 Project-Flex is a compilation of random cool projects that showcase different aspects of web development and programming. Each project is self-contained and demonstrates unique features or concepts.
 
 Projects
